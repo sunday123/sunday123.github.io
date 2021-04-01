@@ -60,7 +60,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">5.2k字</span>
+            <span class="post-count">5.3k字</span>
         </span>
     </span>
 
@@ -290,9 +290,8 @@
 
 
 
-
-
-
+<h4 id="长度为k的最大子数组"><a href="#长度为k的最大子数组" class="headerlink" title="长度为k的最大子数组"></a>长度为k的最大子数组</h4><p>   -2, -1, 2, 1,k=1<br>    0:-1<br>    -2:0<br>    -3:1<br>      max:2<br>    -1:2<br>      max:2</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArrayLen</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//key:存第一次出现的值 value:下标i</span></span><br><span class="line">    HashMap&lt;Integer,Integer&gt; map= <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    map.put(<span class="number">0</span>,-<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> max=<span class="number">0</span>,sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;nums.length ; i++)&#123;</span><br><span class="line">      sum += nums[i];</span><br><span class="line">      <span class="keyword">if</span> (map.containsKey(sum-k)) max=Math.max(max,i-map.get(sum-k));</span><br><span class="line">      <span class="keyword">if</span> (!map.containsKey(sum))  map.put(sum,i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       
