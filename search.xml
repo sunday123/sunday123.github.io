@@ -304,6 +304,11 @@
 <p>双指针类型， 二叉树的路径和 ，左节点是加，右节点是减</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findTargetSumWays</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> S)</span> </span>&#123;</span><br><span class="line">       backtrack(nums,S,<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">backtrack</span><span class="params">(<span class="keyword">int</span>[] nums,<span class="keyword">int</span> S,<span class="keyword">int</span> start)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (S==<span class="number">0</span> &amp;&amp; nums.length==start )&#123;</span><br><span class="line">            count++;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (start &lt; nums.length)&#123;</span><br><span class="line">            backtrack(nums,S+nums[start],start+<span class="number">1</span>);</span><br><span class="line">            backtrack(nums,S-nums[start],start+<span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<h4 id="26删除有序数组中的重复项"><a href="#26删除有序数组中的重复项" class="headerlink" title="26删除有序数组中的重复项"></a>26删除有序数组中的重复项</h4><p><a href="https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/</a></p>
+<p>双指针类型</p>
+<p>//输入：nums = [0,0,1,1,1,2,2,3,3,4]输出：5, nums = [0,1,2,3,4]</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="comment">//双指针</span></span><br><span class="line">        <span class="keyword">if</span> (nums.length&lt;<span class="number">2</span>) <span class="keyword">return</span> nums.length;</span><br><span class="line">        <span class="keyword">int</span> slow=<span class="number">0</span>,fast=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span> (fast&lt;nums.length)&#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[fast] == nums[slow])&#123;</span><br><span class="line">                fast++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                nums[++slow]=nums[fast++];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> slow+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 
 
 <h4 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24 两两交换链表中的节点"></a>24 两两交换链表中的节点</h4><p>给定 1-&gt;2-&gt;3-&gt;4, 你应该返回 2-&gt;1-&gt;4-&gt;3.</p>
@@ -489,6 +494,90 @@
 
 <h4 id="长度为k的最大子数组"><a href="#长度为k的最大子数组" class="headerlink" title="长度为k的最大子数组"></a>长度为k的最大子数组</h4><p>   -2, -1, 2, 1,k=1<br>    0:-1<br>    -2:0<br>    -3:1<br>      max:2<br>    -1:2<br>      max:2</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxSubArrayLen</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//key:存第一次出现的值 value:下标i</span></span><br><span class="line">    HashMap&lt;Integer,Integer&gt; map= <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    map.put(<span class="number">0</span>,-<span class="number">1</span>);</span><br><span class="line">    <span class="keyword">int</span> max=<span class="number">0</span>,sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span> ; i&lt;nums.length ; i++)&#123;</span><br><span class="line">      sum += nums[i];</span><br><span class="line">      <span class="keyword">if</span> (map.containsKey(sum-k)) max=Math.max(max,i-map.get(sum-k));</span><br><span class="line">      <span class="keyword">if</span> (!map.containsKey(sum))  map.put(sum,i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="416分割等和子集"><a href="#416分割等和子集" class="headerlink" title="416分割等和子集"></a>416分割等和子集</h4><p>数组分割成两个和相等的子集</p>
+<p><a href="https://leetcode-cn.com/problems/partition-equal-subset-sum" target="_blank" rel="noopener">https://leetcode-cn.com/problems/partition-equal-subset-sum</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">比如1, 5, 11, 5</span><br><span class="line"></span><br><span class="line">[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</span><br><span class="line">[1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</span><br><span class="line">[1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0]</span><br><span class="line">[1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1]</span><br><span class="line">[1, 1, 0, 0, 0, 2, 2, 0, 0, 0, 1, 2]</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;01背包</span><br><span class="line">for (int i &#x3D; 0; i &lt; n; i++) &#123;</span><br><span class="line">    for (int j &#x3D; m; j &gt;&#x3D; V[i]; j--) &#123;</span><br><span class="line">        f[j] &#x3D; max(f[j], f[j-V[i]] + W[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F;完全背包</span><br><span class="line">for (int i &#x3D; 0; i &lt; n; i++) &#123;</span><br><span class="line">    for (int j &#x3D; V[i]; j &lt;&#x3D; m; j++) &#123;</span><br><span class="line">        f[j] &#x3D; max(f[j], f[j-V[i]] + W[i]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">canPartition</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;<span class="comment">//1, 5, 11, 5</span></span><br><span class="line">        <span class="keyword">int</span> sum=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> num : nums)&#123;</span><br><span class="line">            sum += num;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (sum %<span class="number">2</span> ==<span class="number">1</span>) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">int</span> len = sum/<span class="number">2</span> ;</span><br><span class="line">        <span class="keyword">int</span>[] dp=<span class="keyword">new</span> <span class="keyword">int</span>[len+<span class="number">1</span>];</span><br><span class="line">        dp[<span class="number">0</span>]=<span class="number">1</span>;<span class="comment">//初始化[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> num : nums)&#123;<span class="comment">//len到num（大到小，每隔num个数加1）,比如num=1执行完[1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]</span></span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=len;i&gt;num;i--)&#123;</span><br><span class="line">                dp[i] +=dp[i-num];<span class="comment">//第i个物品，有拿和不拿两种情况，dp[i]表示不拿的情况，dp[i-num]表示拿的情况，因此要将两者相加</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[len]&gt;<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="322零钱兑换"><a href="#322零钱兑换" class="headerlink" title="322零钱兑换"></a>322零钱兑换</h4><p>凑成总金额所需的最少的硬币个数完全背包</p>
+<p>coins = [1, 2, 5], amount = 11</p>
+<p>[0, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]<br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]<br>[0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6]<br>[0, 1, 1, 2, 2, 1, 2, 2, 3, 3, 2, 3]</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[0, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]</span><br><span class="line">[0, 1, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]</span><br><span class="line">[0, 1, 2, 12, 12, 12, 12, 12, 12, 12, 12, 12]</span><br><span class="line">[0, 1, 2, 3, 12, 12, 12, 12, 12, 12, 12, 12]</span><br><span class="line">[0, 1, 2, 3, 4, 12, 12, 12, 12, 12, 12, 12]</span><br><span class="line">[0, 1, 2, 3, 4, 5, 12, 12, 12, 12, 12, 12]</span><br><span class="line">[0, 1, 2, 3, 4, 5, 6, 12, 12, 12, 12, 12]</span><br><span class="line">[0, 1, 2, 3, 4, 5, 6, 7, 12, 12, 12, 12]</span><br><span class="line">[0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 12, 12]</span><br><span class="line">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 12]</span><br><span class="line">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]</span><br><span class="line">[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</span><br><span class="line"></span><br><span class="line">[0, 1, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11]</span><br><span class="line">[0, 1, 1, 2, 4, 5, 6, 7, 8, 9, 10, 11]</span><br><span class="line">[0, 1, 1, 2, 2, 5, 6, 7, 8, 9, 10, 11]</span><br><span class="line">[0, 1, 1, 2, 2, 3, 6, 7, 8, 9, 10, 11]</span><br><span class="line">[0, 1, 1, 2, 2, 3, 3, 7, 8, 9, 10, 11]</span><br><span class="line">[0, 1, 1, 2, 2, 3, 3, 4, 8, 9, 10, 11]</span><br><span class="line">[0, 1, 1, 2, 2, 3, 3, 4, 4, 9, 10, 11]</span><br><span class="line">[0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 10, 11]</span><br><span class="line">[0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 11]</span><br><span class="line">[0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6]</span><br><span class="line"></span><br><span class="line">[0, 1, 1, 2, 2, 1, 3, 4, 4, 5, 5, 6]</span><br><span class="line">[0, 1, 1, 2, 2, 1, 2, 4, 4, 5, 5, 6]</span><br><span class="line">[0, 1, 1, 2, 2, 1, 2, 2, 4, 5, 5, 6]</span><br><span class="line">[0, 1, 1, 2, 2, 1, 2, 2, 3, 5, 5, 6]</span><br><span class="line">[0, 1, 1, 2, 2, 1, 2, 2, 3, 3, 5, 6]</span><br><span class="line">[0, 1, 1, 2, 2, 1, 2, 2, 3, 3, 2, 6]</span><br><span class="line">[0, 1, 1, 2, 2, 1, 2, 2, 3, 3, 2, 3]</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">coinChange</span><span class="params">(<span class="keyword">int</span>[] coins, <span class="keyword">int</span> amount)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> max = amount+<span class="number">1</span>;<span class="comment">//表示最大值,比amount大</span></span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[amount+<span class="number">1</span>];<span class="comment">//dp价值在这里代表个数</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;dp.length;i++)&#123;</span><br><span class="line">            dp[i]=max;</span><br><span class="line">        &#125;</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">0</span>;<span class="comment">//金额为0的时候，需要0个硬币</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> coin : coins) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = coin; j &lt;= amount; j++) &#123;</span><br><span class="line">               dp[j] = Math.min(dp[j], dp[j-coin] +<span class="number">1</span>);<span class="comment">//公式代表个数所以+1</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[amount]==max?-<span class="number">1</span>:dp[amount];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="1143最长公共子序列"><a href="#1143最长公共子序列" class="headerlink" title="1143最长公共子序列"></a>1143最长公共子序列</h4><p>最长公共子序列（LCS）</p>
+<p><a href="https://leetcode-cn.com/problems/longest-common-subsequence/solution/dong-tai-gui-hua-jie-lcswen-ti-by-cyinge-k3zz/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-common-subsequence/solution/dong-tai-gui-hua-jie-lcswen-ti-by-cyinge-k3zz/</a></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&quot;abcde&quot;,&quot;ace&quot;</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 1, 1, 1]</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line"></span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 1, 1, 1]</span><br><span class="line">[0, 1, 1, 1]</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line"></span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 1, 1, 1]</span><br><span class="line">[0, 1, 1, 1]</span><br><span class="line">[0, 1, 2, 2]</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line"></span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 1, 1, 1]</span><br><span class="line">[0, 1, 1, 1]</span><br><span class="line">[0, 1, 2, 2]</span><br><span class="line">[0, 1, 2, 2]</span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line"></span><br><span class="line">[0, 0, 0, 0]</span><br><span class="line">[0, 1, 1, 1]</span><br><span class="line">[0, 1, 1, 1]</span><br><span class="line">[0, 1, 2, 2]</span><br><span class="line">[0, 1, 2, 2]</span><br><span class="line">[0, 1, 2, 3]</span><br><span class="line">​</span><br></pre></td></tr></table></figure>
+<p>[0, 0, 0, 0]<br>[0, 1, 1, 1]<br>[0, 0, 0, 0]<br>[0, 0, 0, 0]<br>[0, 0, 0, 0]<br>[0, 0, 0, 0]</p>
+<p>[0, 0, 0, 0]<br>[0, 1, 1, 1]<br>[0, 1, 1, 1]<br>[0, 0, 0, 0]<br>[0, 0, 0, 0]<br>[0, 0, 0, 0]</p>
+<p>[0, 0, 0, 0]<br>[0, 1, 1, 1]<br>[0, 1, 1, 1]<br>[0, 1, 2, 2]<br>[0, 0, 0, 0]<br>[0, 0, 0, 0]</p>
+<p>[0, 0, 0, 0]<br>[0, 1, 1, 1]<br>[0, 1, 1, 1]<br>[0, 1, 2, 2]<br>[0, 1, 2, 2]<br>[0, 0, 0, 0]</p>
+<p>[0, 0, 0, 0]<br>[0, 1, 1, 1]<br>[0, 1, 1, 1]<br>[0, 1, 2, 2]<br>[0, 1, 2, 2]<br>[0, 1, 2, 3]</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;java</span><br><span class="line">class Solution &#123;</span><br><span class="line">    &#x2F;&#x2F;动态规划</span><br><span class="line">    public int longestCommonSubsequence(String text1, String text2) &#123;</span><br><span class="line">       int len1&#x3D;text1.length(),len2&#x3D;text2.length();</span><br><span class="line">       char[] cs1&#x3D;text1.toCharArray(),cs2&#x3D;text2.toCharArray();</span><br><span class="line">       int[][] dp &#x3D; new int[len1+1][len2+1]; &#x2F;&#x2F;dp代表相同的个数</span><br><span class="line">       for(int i&#x3D;1;i&lt;&#x3D;len1;i++)&#123;</span><br><span class="line">           for (int j&#x3D;1;j&lt;&#x3D;len2;j++)&#123;</span><br><span class="line">               if (cs1[i-1]&#x3D;&#x3D;cs2[j-1])&#123;</span><br><span class="line">                   dp[i][j]&#x3D;dp[i-1][j-1]+1;</span><br><span class="line">               &#125;else &#123;</span><br><span class="line">                   dp[i][j]&#x3D;Math.max(dp[i-1][j],dp[i][j-1]);</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;</span><br><span class="line">       return dp[len1][len2];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="14最长公共前缀"><a href="#14最长公共前缀" class="headerlink" title="14最长公共前缀"></a>14最长公共前缀</h4><p><a href="https://leetcode-cn.com/problems/longest-common-prefix/" target="_blank" rel="noopener">https://leetcode-cn.com/problems/longest-common-prefix/</a></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (strs.length&lt;<span class="number">1</span>) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;strs.length;i++)&#123;</span><br><span class="line">            <span class="keyword">while</span> (!strs[i].startsWith(strs[<span class="number">0</span>]))&#123;</span><br><span class="line">                strs[<span class="number">0</span>]=strs[<span class="number">0</span>].substring(<span class="number">0</span>,strs[<span class="number">0</span>].length()-<span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> strs[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ]]></content>
       <tags>
