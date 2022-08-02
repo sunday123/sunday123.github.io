@@ -1190,8 +1190,8 @@
       </tags>
   </entry>
   <entry>
-    <title></title>
-    <url>/2022/08/02/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D%20/</url>
+    <title>github不同项目pages使用不同的域名</title>
+    <url>/2022/08/02/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
     <content><![CDATA[<h1 id="github不同项目pages使用不同的域名"><a href="#github不同项目pages使用不同的域名" class="headerlink" title="github不同项目pages使用不同的域名"></a>github不同项目pages使用不同的域名</h1><h2 id="CNAME方式"><a href="#CNAME方式" class="headerlink" title="CNAME方式"></a>CNAME方式</h2><p>最常见的是 CNAME方式： <user>.github.io 或 <organization>.github.io </p>
 <p>具体参考 <a href="https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages</a> </p>
 <p>比如添加 <a href="http://www.example.com/">www.example.com</a> 指向 example.github.io在项目根目录 添加文件CNAME, </p>
@@ -1206,5 +1206,9 @@
 <h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="https://file.ij34.com/images/2022-08/20220802201500.png"></p>
 <p><img src="https://file.ij34.com/images/2022-08/20220802201759.png"></p>
 ]]></content>
+      <tags>
+        <tag>domain</tag>
+        <tag>github</tag>
+      </tags>
   </entry>
 </search>

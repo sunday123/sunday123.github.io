@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+
+<html lang="zh-Hans">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>github不同项目pages使用不同的域名 |  Just</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/favicon.ico" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/Shen-Yu/cdn/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+       
+ 
+<script>
+var _hmt = _hmt || [];
+(function() {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?ie5d8nwn22";
+	var s = document.getElementsByTagName("script")[0]; 
+	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="Just" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-github不同项目pages使用不同的域名"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  github不同项目pages使用不同的域名
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/08/02/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D/" class="article-date">
+  <time datetime="2022-08-02T12:30:26.000Z" itemprop="datePublished">2022-08-02</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">184</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">1 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <h1 id="github不同项目pages使用不同的域名"><a href="#github不同项目pages使用不同的域名" class="headerlink" title="github不同项目pages使用不同的域名"></a>github不同项目pages使用不同的域名</h1><h2 id="CNAME方式"><a href="#CNAME方式" class="headerlink" title="CNAME方式"></a>CNAME方式</h2><p>最常见的是 CNAME方式： <user>.github.io 或 <organization>.github.io </p>
+<p>具体参考 <a target="_blank" rel="noopener" href="https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages</a> </p>
+<p>比如添加 <a target="_blank" rel="noopener" href="http://www.example.com/">www.example.com</a> 指向 example.github.io在项目根目录 添加文件CNAME, </p>
+<p>里面内容： <a target="_blank" rel="noopener" href="http://www.example.com/">www.example.com</a> </p>
+<p>之后的项目files的pages默认地址是<a target="_blank" rel="noopener" href="http://www.example.com/">www.example.com/files</a> </p>
+<h2 id="默认方式"><a href="#默认方式" class="headerlink" title="默认方式"></a>默认方式</h2><p>如果同一个GitHub账号上另一个项目比如files也开启一个pages</p>
+<p>那么默认的访问路径是<a target="_blank" rel="noopener" href="http://www.example.com/files">www.example.com/files</a></p>
+<h2 id="A方式"><a href="#A方式" class="headerlink" title="A方式"></a>A方式</h2><p>如果想把<a target="_blank" rel="noopener" href="http://www.example.com/files">www.example.com/files</a> 改成 file.example.com,可以通过A方式.</p>
+<p> CNAME 文件对应一个域名， 比如file.example.com,</p>
+<p>在域名里面A方式配置 </p>
+<p><img src="data:image/jpeg;base64,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iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigaNW3/wCRZvP+viL/ANBasqiigQUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAVqeHf+Qg//AF7zf+i2oooAy/8A4qiiigAooooAKKKKACiiigArUk/5Fm2/6+pP/QEoooAy6KKKACiiigAooooAKKKKACiiigAooooAKKKKANnSf+Rd1z6Q/wDoysaiigD6L/ZM+G/hr4gaP48l8QaVHqUmniz+ytI7r5W8zbsbSOu1evpXq3/CifAf/QuW/wD38k/+KoooAP8AhRPgP/oXLf8A7+Sf/FV1nw3+GHhbwj4pku9J0aC0uVgbbICzkdOm4nFFFBSOH/b4hT/hB/h5Jj53lutzZPPIr4qoooEzWsf+Rd1b/fg/m1ZNFFAgooooE9ia1UPdRqwyCy8fiK/TH4eaRZan8MW8MXdtHcaCumttspBlV57HqPwNFFeFmH8Sl6n0mVJeyq+h8o/sm+D9G1z9oGS01Cwju7azkeSCKTJVGVvlOM8496+svjJaw+MPAfiu11iJL63tVYwRuoAjK5xtxjGKKKyxr/2qn/XY2y1L6rX9D8xW+8aSiivoT5cKu6P/AMhax/67x/8AoQoopiF1v/kNah/18Sf+hGqNFFNgfTnwt/5ELR/+uTf+htXU0UV9tQ/hx9D4qv8AxZerP//Z" alt="img"></p>
+<h2 id="效果"><a href="#效果" class="headerlink" title="效果"></a>效果</h2><p><img src="https://file.ij34.com/images/2022-08/20220802201500.png"></p>
+<p><img src="https://file.ij34.com/images/2022-08/20220802201759.png"></p>
+ 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://www.ij34.com/2022/08/02/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/domain/" rel="tag">domain</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/github/" rel="tag">github</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2021/11/20/48%E4%B8%AA%E9%9F%B3%E6%A0%87/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">48个音标</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "PfK2yhgbWP6l0yW4PqDtJpLT-MdYXbMMI",
+    app_key: "Ph6OvhafEznSyDB4zCWtKwem",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2020-2022
+        <i class="ri-heart-fill heart_icon"></i> Lin
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1258934647&amp;web_id=1258934647'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/ayer-side.svg" alt="Just"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">随笔</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/2020/02/13/about/">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+      <a class="nav-item-link" target="_blank" href="/atom.xml" title="RSS Feed">
+        <i class="ri-rss-line"></i>
+      </a>
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i></p>
+  <div class="reward-box">
+    
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/jquery-modal@0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css">
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    
+
+  </div>
+</body>
+
+</html>
