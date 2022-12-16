@@ -244,22 +244,18 @@
  
    
 <div class="gitalk" id="gitalk-container"></div>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.css">
-
-
-<script src="https://cdn.jsdelivr.net/npm/gitalk@1.7.2/dist/gitalk.min.js"></script>
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script>
 
 <script type="text/javascript">
   var gitalk = new Gitalk({
-    clientID: '',
+    clientID: '94949b2a544d50567f42',
     clientSecret: '79843101df6d2ce5d91abce97de514a3318f2ced',
     repo: 'blog-comment',
     owner: 'sunday123',
-    admin: [''],
+  //  admin: [''],
     // id: location.pathname,      // Ensure uniqueness and length less than 50
     id: md5(location.pathname),
     distractionFreeMode: false,  // Facebook-like distraction free mode
