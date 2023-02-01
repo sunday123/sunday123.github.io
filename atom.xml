@@ -6,7 +6,7 @@
   <link href="http://www.ij34.com/atom.xml" rel="self"/>
   
   <link href="http://www.ij34.com/"/>
-  <updated>2022-08-10T14:35:43.452Z</updated>
+  <updated>2023-02-01T14:31:37.514Z</updated>
   <id>http://www.ij34.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>centos7 update ssh port</title>
+    <link href="http://www.ij34.com/2023/02/01/centos7-update-ssh-port/"/>
+    <id>http://www.ij34.com/2023/02/01/centos7-update-ssh-port/</id>
+    <published>2023-02-01T14:28:38.000Z</published>
+    <updated>2023-02-01T14:31:37.514Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="0x01-open-ports-firewall"><a href="#0x01-open-ports-firewall" class="headerlink" title="0x01 open ports firewall"></a>0x01 open ports firewall</h2><p>It should include 22 port</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">systemctl status firewalld</span><br><span class="line">firewall-cmd --zone=public --list-all </span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=222/tcp</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=22/tcp</span><br></pre></td></tr></table></figure><h2 id="0x02-update-sshd-config"><a href="#0x02-update-sshd-config" class="headerlink" title="0x02 update sshd config"></a>0x02 update sshd config</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure><p>add:</p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">Port</span> <span class="number">22</span></span><br><span class="line"><span class="attribute">Port</span> <span class="number">222</span></span><br></pre></td></tr></table></figure><h2 id="0x03-install-semanage"><a href="#0x03-install-semanage" class="headerlink" title="0x03 install semanage"></a>0x03 install semanage</h2><p>It involve with the problem of SELinux when we update ssh ports.</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">yum provides semanage</span><br><span class="line">yum -y install policycoreutils-python</span><br><span class="line">semanage port -a -t ssh_port_t -p tcp 222</span><br></pre></td></tr></table></figure><p>and</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart sshd</span><br><span class="line">or</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="0x04-end"><a href="#0x04-end" class="headerlink" title="0x04 end"></a>0x04 end</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">firewall-cmd --permanent --zone=public --remove-port=22/tcp</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure><p>vi /etc/ssh/sshd_config &amp; remove Port 22</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;0x01-open-ports-firewall&quot;&gt;&lt;a href=&quot;#0x01-open-ports-firewall&quot; class=&quot;headerlink&quot; title=&quot;0x01 open ports firewall&quot;&gt;&lt;/a&gt;0x01 open port</summary>
+      
+    
+    
+    
+    
+    <category term="centos7" scheme="http://www.ij34.com/tags/centos7/"/>
+    
+    <category term="ssh" scheme="http://www.ij34.com/tags/ssh/"/>
+    
+  </entry>
   
   <entry>
     <title>GitHub, build free Image Hosting</title>
