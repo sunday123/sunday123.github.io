@@ -6,7 +6,7 @@
   <link href="http://www.ij34.com/atom.xml" rel="self"/>
   
   <link href="http://www.ij34.com/"/>
-  <updated>2023-02-01T14:31:37.514Z</updated>
+  <updated>2023-02-07T12:39:55.062Z</updated>
   <id>http://www.ij34.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>git-Modify the userName after push</title>
+    <link href="http://www.ij34.com/2023/02/07/git-Modify-the-userName-after-push/"/>
+    <id>http://www.ij34.com/2023/02/07/git-Modify-the-userName-after-push/</id>
+    <published>2023-02-07T12:29:28.000Z</published>
+    <updated>2023-02-07T12:39:55.062Z</updated>
+    
+    <content type="html"><![CDATA[<p>This method is suitable for updating the username after pushing.</p><p>cd  the root of THE GIT PROJECT</p><p>Replace the following parameters.</p><p><em>OLD_EMAIL</em><br><em>CORRECT_NAME</em><br><em>CORRECT_EMAIL</em></p><p>executive:</p><figure class="highlight julia"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">git filter-branch  -f --env-filter &#x27;</span><br><span class="line">OLD_EMAIL=<span class="string">&quot;oldEmail@foxmail.com&quot;</span></span><br><span class="line">CORRECT_NAME=<span class="string">&quot;newName&quot;</span></span><br><span class="line">CORRECT_EMAIL=<span class="string">&quot;new@email.com&quot;</span></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$GIT_COMMITTER_EMAIL</span>&quot;</span> = <span class="string">&quot;<span class="variable">$OLD_EMAIL</span>&quot;</span> ]</span><br><span class="line">then</span><br><span class="line"><span class="keyword">export</span> GIT_COMMITTER_NAME=<span class="string">&quot;<span class="variable">$CORRECT_NAME</span>&quot;</span></span><br><span class="line"><span class="keyword">export</span> GIT_COMMITTER_EMAIL=<span class="string">&quot;<span class="variable">$CORRECT_EMAIL</span>&quot;</span></span><br><span class="line">fi</span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$GIT_AUTHOR_EMAIL</span>&quot;</span> = <span class="string">&quot;<span class="variable">$OLD_EMAIL</span>&quot;</span> ]</span><br><span class="line">then</span><br><span class="line"><span class="keyword">export</span> GIT_AUTHOR_NAME=<span class="string">&quot;<span class="variable">$CORRECT_NAME</span>&quot;</span></span><br><span class="line"><span class="keyword">export</span> GIT_AUTHOR_EMAIL=<span class="string">&quot;<span class="variable">$CORRECT_EMAIL</span>&quot;</span></span><br><span class="line">fi</span><br><span class="line">&#x27; --tag-name-filter cat -- --branches --tags</span><br></pre></td></tr></table></figure><p>Push up the dev branch.</p><figure class="highlight dsconfig"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">git</span> <span class="string">push</span> <span class="built_in">--force</span> <span class="built_in">--tags</span> <span class="string">origin</span> <span class="string">&#x27;refs/heads/dev&#x27;</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;This method is suitable for updating the username after pushing.&lt;/p&gt;
+&lt;p&gt;cd  the root of THE GIT PROJECT&lt;/p&gt;
+&lt;p&gt;Replace the following para</summary>
+      
+    
+    
+    
+    
+    <category term="git" scheme="http://www.ij34.com/tags/git/"/>
+    
+    <category term="UPDATE USERNAME" scheme="http://www.ij34.com/tags/UPDATE-USERNAME/"/>
+    
+  </entry>
   
   <entry>
     <title>centos7 update ssh port</title>
