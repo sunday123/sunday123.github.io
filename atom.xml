@@ -3,11 +3,11 @@
   <title>Just</title>
   
   <subtitle>仰望星空，脚踏实地</subtitle>
-  <link href="http://www.ij34.com/atom.xml" rel="self"/>
+  <link href="https://www.ij34.com/atom.xml" rel="self"/>
   
-  <link href="http://www.ij34.com/"/>
+  <link href="https://www.ij34.com/"/>
   <updated>2023-02-07T12:39:55.062Z</updated>
-  <id>http://www.ij34.com/</id>
+  <id>https://www.ij34.com/</id>
   
   <author>
     <name>Lin</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>git-Modify the userName after push</title>
-    <link href="http://www.ij34.com/2023/02/07/git-Modify-the-userName-after-push/"/>
-    <id>http://www.ij34.com/2023/02/07/git-Modify-the-userName-after-push/</id>
+    <link href="https://www.ij34.com/2023/02/07/git-Modify-the-userName-after-push/"/>
+    <id>https://www.ij34.com/2023/02/07/git-Modify-the-userName-after-push/</id>
     <published>2023-02-07T12:29:28.000Z</published>
     <updated>2023-02-07T12:39:55.062Z</updated>
     
@@ -36,16 +36,16 @@
     
     
     
-    <category term="git" scheme="http://www.ij34.com/tags/git/"/>
+    <category term="git" scheme="https://www.ij34.com/tags/git/"/>
     
-    <category term="UPDATE USERNAME" scheme="http://www.ij34.com/tags/UPDATE-USERNAME/"/>
+    <category term="UPDATE USERNAME" scheme="https://www.ij34.com/tags/UPDATE-USERNAME/"/>
     
   </entry>
   
   <entry>
     <title>centos7 update ssh port</title>
-    <link href="http://www.ij34.com/2023/02/01/centos7-update-ssh-port/"/>
-    <id>http://www.ij34.com/2023/02/01/centos7-update-ssh-port/</id>
+    <link href="https://www.ij34.com/2023/02/01/centos7-update-ssh-port/"/>
+    <id>https://www.ij34.com/2023/02/01/centos7-update-ssh-port/</id>
     <published>2023-02-01T14:28:38.000Z</published>
     <updated>2023-02-01T14:31:37.514Z</updated>
     
@@ -60,16 +60,16 @@
     
     
     
-    <category term="centos7" scheme="http://www.ij34.com/tags/centos7/"/>
+    <category term="centos7" scheme="https://www.ij34.com/tags/centos7/"/>
     
-    <category term="ssh" scheme="http://www.ij34.com/tags/ssh/"/>
+    <category term="ssh" scheme="https://www.ij34.com/tags/ssh/"/>
     
   </entry>
   
   <entry>
     <title>GitHub, build free Image Hosting</title>
-    <link href="http://www.ij34.com/2022/08/07/GitHub-build-free-Image-Hosting/"/>
-    <id>http://www.ij34.com/2022/08/07/GitHub-build-free-Image-Hosting/</id>
+    <link href="https://www.ij34.com/2022/08/07/GitHub-build-free-Image-Hosting/"/>
+    <id>https://www.ij34.com/2022/08/07/GitHub-build-free-Image-Hosting/</id>
     <published>2022-08-07T14:48:39.000Z</published>
     <updated>2022-08-10T14:35:43.452Z</updated>
     
@@ -85,14 +85,14 @@
     
     
     
-    <category term="ImageHost" scheme="http://www.ij34.com/tags/ImageHost/"/>
+    <category term="ImageHost" scheme="https://www.ij34.com/tags/ImageHost/"/>
     
   </entry>
   
   <entry>
     <title>Android自带应用精简</title>
-    <link href="http://www.ij34.com/2022/08/02/Android%E8%87%AA%E5%B8%A6%E5%BA%94%E7%94%A8%E7%B2%BE%E7%AE%80/"/>
-    <id>http://www.ij34.com/2022/08/02/Android%E8%87%AA%E5%B8%A6%E5%BA%94%E7%94%A8%E7%B2%BE%E7%AE%80/</id>
+    <link href="https://www.ij34.com/2022/08/02/Android%E8%87%AA%E5%B8%A6%E5%BA%94%E7%94%A8%E7%B2%BE%E7%AE%80/"/>
+    <id>https://www.ij34.com/2022/08/02/Android%E8%87%AA%E5%B8%A6%E5%BA%94%E7%94%A8%E7%B2%BE%E7%AE%80/</id>
     <published>2022-08-02T12:46:47.000Z</published>
     <updated>2022-08-02T12:53:13.057Z</updated>
     
@@ -108,16 +108,16 @@
     
     
     
-    <category term="android" scheme="http://www.ij34.com/tags/android/"/>
+    <category term="android" scheme="https://www.ij34.com/tags/android/"/>
     
-    <category term="app" scheme="http://www.ij34.com/tags/app/"/>
+    <category term="app" scheme="https://www.ij34.com/tags/app/"/>
     
   </entry>
   
   <entry>
     <title>github不同项目pages使用不同的域名</title>
-    <link href="http://www.ij34.com/2022/08/02/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D/"/>
-    <id>http://www.ij34.com/2022/08/02/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D/</id>
+    <link href="https://www.ij34.com/2022/08/02/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D/"/>
+    <id>https://www.ij34.com/2022/08/02/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D/</id>
     <published>2022-08-02T12:30:26.000Z</published>
     <updated>2022-08-02T12:32:14.172Z</updated>
     
@@ -132,16 +132,16 @@
     
     
     
-    <category term="domain" scheme="http://www.ij34.com/tags/domain/"/>
+    <category term="domain" scheme="https://www.ij34.com/tags/domain/"/>
     
-    <category term="github" scheme="http://www.ij34.com/tags/github/"/>
+    <category term="github" scheme="https://www.ij34.com/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>48个音标</title>
-    <link href="http://www.ij34.com/2021/11/20/48%E4%B8%AA%E9%9F%B3%E6%A0%87/"/>
-    <id>http://www.ij34.com/2021/11/20/48%E4%B8%AA%E9%9F%B3%E6%A0%87/</id>
+    <link href="https://www.ij34.com/2021/11/20/48%E4%B8%AA%E9%9F%B3%E6%A0%87/"/>
+    <id>https://www.ij34.com/2021/11/20/48%E4%B8%AA%E9%9F%B3%E6%A0%87/</id>
     <published>2021-11-19T23:17:24.000Z</published>
     <updated>2023-03-04T15:49:11.079Z</updated>
     
@@ -161,14 +161,14 @@
     
     
     
-    <category term="随笔" scheme="http://www.ij34.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://www.ij34.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://www.ij34.com/2021/11/19/hello-world/"/>
-    <id>http://www.ij34.com/2021/11/19/hello-world/</id>
+    <link href="https://www.ij34.com/2021/11/19/hello-world/"/>
+    <id>https://www.ij34.com/2021/11/19/hello-world/</id>
     <published>2021-11-19T12:49:13.084Z</published>
     <updated>2021-11-19T12:49:13.084Z</updated>
     
@@ -187,8 +187,8 @@
   
   <entry>
     <title>docker快速部署springboot例子</title>
-    <link href="http://www.ij34.com/2020/10/14/docker%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2springboot%E4%BE%8B%E5%AD%90/"/>
-    <id>http://www.ij34.com/2020/10/14/docker%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2springboot%E4%BE%8B%E5%AD%90/</id>
+    <link href="https://www.ij34.com/2020/10/14/docker%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2springboot%E4%BE%8B%E5%AD%90/"/>
+    <id>https://www.ij34.com/2020/10/14/docker%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2springboot%E4%BE%8B%E5%AD%90/</id>
     <published>2020-10-14T10:55:23.000Z</published>
     <updated>2022-08-02T11:31:31.984Z</updated>
     
@@ -203,16 +203,16 @@
     
     
     
-    <category term="docker" scheme="http://www.ij34.com/tags/docker/"/>
+    <category term="docker" scheme="https://www.ij34.com/tags/docker/"/>
     
-    <category term="springboot" scheme="http://www.ij34.com/tags/springboot/"/>
+    <category term="springboot" scheme="https://www.ij34.com/tags/springboot/"/>
     
   </entry>
   
   <entry>
     <title>数据库常见的操作</title>
-    <link href="http://www.ij34.com/2020/10/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
-    <id>http://www.ij34.com/2020/10/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/</id>
+    <link href="https://www.ij34.com/2020/10/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/"/>
+    <id>https://www.ij34.com/2020/10/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/</id>
     <published>2020-10-11T02:46:30.000Z</published>
     <updated>2021-11-19T12:49:13.084Z</updated>
     
@@ -227,14 +227,14 @@
     
     
     
-    <category term="数据库" scheme="http://www.ij34.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <category term="数据库" scheme="https://www.ij34.com/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
     
   </entry>
   
   <entry>
     <title>leetcode算法</title>
-    <link href="http://www.ij34.com/2020/10/11/%E7%AE%97%E6%B3%95/"/>
-    <id>http://www.ij34.com/2020/10/11/%E7%AE%97%E6%B3%95/</id>
+    <link href="https://www.ij34.com/2020/10/11/%E7%AE%97%E6%B3%95/"/>
+    <id>https://www.ij34.com/2020/10/11/%E7%AE%97%E6%B3%95/</id>
     <published>2020-10-11T02:20:30.000Z</published>
     <updated>2021-11-19T12:49:13.084Z</updated>
     
@@ -249,14 +249,14 @@
     
     
     
-    <category term="LeetCode" scheme="http://www.ij34.com/tags/LeetCode/"/>
+    <category term="LeetCode" scheme="https://www.ij34.com/tags/LeetCode/"/>
     
   </entry>
   
   <entry>
     <title>程序员常见词汇发音</title>
-    <link href="http://www.ij34.com/2020/10/11/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B8%B8%E8%A7%81%E8%AF%8D%E6%B1%87%E5%8F%91%E9%9F%B3/"/>
-    <id>http://www.ij34.com/2020/10/11/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B8%B8%E8%A7%81%E8%AF%8D%E6%B1%87%E5%8F%91%E9%9F%B3/</id>
+    <link href="https://www.ij34.com/2020/10/11/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B8%B8%E8%A7%81%E8%AF%8D%E6%B1%87%E5%8F%91%E9%9F%B3/"/>
+    <id>https://www.ij34.com/2020/10/11/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B8%B8%E8%A7%81%E8%AF%8D%E6%B1%87%E5%8F%91%E9%9F%B3/</id>
     <published>2020-10-11T01:54:24.000Z</published>
     <updated>2022-08-02T11:33:19.501Z</updated>
     
@@ -276,14 +276,14 @@
     
     
     
-    <category term="随笔" scheme="http://www.ij34.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://www.ij34.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
   <entry>
     <title>About Me</title>
-    <link href="http://www.ij34.com/2020/02/13/about/"/>
-    <id>http://www.ij34.com/2020/02/13/about/</id>
+    <link href="https://www.ij34.com/2020/02/13/about/"/>
+    <id>https://www.ij34.com/2020/02/13/about/</id>
     <published>2020-02-12T18:37:04.000Z</published>
     <updated>2021-11-19T12:49:13.084Z</updated>
     
@@ -302,7 +302,7 @@
     
     
     
-    <category term="随笔" scheme="http://www.ij34.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    <category term="随笔" scheme="https://www.ij34.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
