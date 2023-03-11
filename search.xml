@@ -358,6 +358,50 @@
       </tags>
   </entry>
   <entry>
+    <title>About Me</title>
+    <url>/2020/02/13/about/</url>
+    <content><![CDATA[<blockquote>
+<p>A Coder, live in Guangzhou, China.</p>
+</blockquote>
+<p>姓名：xxx<br>家乡：xxx<br>现居：广州</p>
+]]></content>
+      <tags>
+        <tag>随笔</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>centos7 update ssh port</title>
+    <url>/2023/02/01/centos7-update-ssh-port/</url>
+    <content><![CDATA[<h2 id="0x01-open-ports-firewall"><a href="#0x01-open-ports-firewall" class="headerlink" title="0x01 open ports firewall"></a>0x01 open ports firewall</h2><p>It should include 22 port</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br><span class="line">firewall-cmd --zone=public --list-all </span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=222/tcp</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=22/tcp</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="0x02-update-sshd-config"><a href="#0x02-update-sshd-config" class="headerlink" title="0x02 update sshd config"></a>0x02 update sshd config</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
+
+<p>add:</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Port</span> <span class="number">22</span></span><br><span class="line"><span class="attribute">Port</span> <span class="number">222</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="0x03-install-semanage"><a href="#0x03-install-semanage" class="headerlink" title="0x03 install semanage"></a>0x03 install semanage</h2><p>It involve with the problem of SELinux when we update ssh ports.</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum provides semanage</span><br><span class="line">yum -y install policycoreutils-python</span><br><span class="line">semanage port -a -t ssh_port_t -p tcp 222</span><br></pre></td></tr></table></figure>
+
+<p>and</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl restart sshd</span><br><span class="line">or</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="0x04-end"><a href="#0x04-end" class="headerlink" title="0x04 end"></a>0x04 end</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --permanent --zone=public --remove-port=22/tcp</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
+
+<p>vi /etc/ssh/sshd_config &amp; remove Port 22</p>
+]]></content>
+      <tags>
+        <tag>centos7</tag>
+        <tag>ssh</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Android自带应用精简</title>
     <url>/2022/08/02/Android%E8%87%AA%E5%B8%A6%E5%BA%94%E7%94%A8%E7%B2%BE%E7%AE%80/</url>
     <content><![CDATA[<p>个别软件,前提要去卡米</p>
@@ -406,18 +450,6 @@
 ]]></content>
       <tags>
         <tag>ImageHost</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>About Me</title>
-    <url>/2020/02/13/about/</url>
-    <content><![CDATA[<blockquote>
-<p>A Coder, live in Guangzhou, China.</p>
-</blockquote>
-<p>姓名：xxx<br>家乡：xxx<br>现居：广州</p>
-]]></content>
-      <tags>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -490,38 +522,6 @@
       </tags>
   </entry>
   <entry>
-    <title>centos7 update ssh port</title>
-    <url>/2023/02/01/centos7-update-ssh-port/</url>
-    <content><![CDATA[<h2 id="0x01-open-ports-firewall"><a href="#0x01-open-ports-firewall" class="headerlink" title="0x01 open ports firewall"></a>0x01 open ports firewall</h2><p>It should include 22 port</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br><span class="line">firewall-cmd --zone=public --list-all </span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=222/tcp</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=22/tcp</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="0x02-update-sshd-config"><a href="#0x02-update-sshd-config" class="headerlink" title="0x02 update sshd config"></a>0x02 update sshd config</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo vi /etc/ssh/sshd_config</span><br></pre></td></tr></table></figure>
-
-<p>add:</p>
-<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">Port</span> <span class="number">22</span></span><br><span class="line"><span class="attribute">Port</span> <span class="number">222</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="0x03-install-semanage"><a href="#0x03-install-semanage" class="headerlink" title="0x03 install semanage"></a>0x03 install semanage</h2><p>It involve with the problem of SELinux when we update ssh ports.</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yum provides semanage</span><br><span class="line">yum -y install policycoreutils-python</span><br><span class="line">semanage port -a -t ssh_port_t -p tcp 222</span><br></pre></td></tr></table></figure>
-
-<p>and</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl restart sshd</span><br><span class="line">or</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="0x04-end"><a href="#0x04-end" class="headerlink" title="0x04 end"></a>0x04 end</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">firewall-cmd --permanent --zone=public --remove-port=22/tcp</span><br><span class="line">firewall-cmd --reload</span><br></pre></td></tr></table></figure>
-
-<p>vi /etc/ssh/sshd_config &amp; remove Port 22</p>
-]]></content>
-      <tags>
-        <tag>centos7</tag>
-        <tag>ssh</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>github不同项目pages使用不同的域名</title>
     <url>/2022/08/02/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
     <content><![CDATA[<h1 id="github不同项目pages使用不同的域名"><a href="#github不同项目pages使用不同的域名" class="headerlink" title="github不同项目pages使用不同的域名"></a>github不同项目pages使用不同的域名</h1><h2 id="CNAME方式"><a href="#CNAME方式" class="headerlink" title="CNAME方式"></a>CNAME方式</h2><p>最常见的是 CNAME方式： <user>.github.io 或 <organization>.github.io </p>
@@ -542,24 +542,6 @@
         <tag>domain</tag>
         <tag>github</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/11/19/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
   <entry>
     <title>数据库常见的操作</title>
