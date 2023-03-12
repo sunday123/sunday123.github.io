@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+       
+      <meta name="keywords" content="本地视频播放,播放器,本地视频在线播放,本地视频,mp4" />
+       
+      <meta name="description" content="本地视频播放,播放器,本地视频在线播放,本地视频,mp4" />
+      
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+	  <meta name="google-site-verification" content="MpICyUa6M2MkE3vruSqLVM5tnr1hlj6uf5uPZXieaWs" />
+	  <!-- bing -->
+	  <meta name="msvalidate.01" content="58230E97F049656FC1A0D09E46BC6D34" />
+      <title> 本地视频播放器</title>      
+      <link rel="shortcut icon" href="/favicon.ico" />
+	    <meta name="generator" content="hexo-theme-ayer">
+<link rel="stylesheet" href="/dist/main.css">
+
+      <link
+        rel="stylesheet"
+        href="https://file.ij34.com/jsdelivr/css/remixicon.min.css"
+      />
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://file.ij34.com/jsdelivr/js/pace.min.js"></script>
+       
+
+      <link
+        rel="stylesheet"
+        href="https://file.ij34.com/jsdelivr/css/bulma.min.css"
+      />
+      <script src="https://file.ij34.com/jsdelivr/js/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+	</head>
+	<body>
+
+
+<input type="file" id="file" name="file" accept="video/*"  onchange="videoPreview(this)" />  <div class="videoBox" id="videoBox"></div>
+
+     <script type="text/javascript">
+        function videoPreview(source) {
+            var file = source.files[0];
+            console.log(source.files);
+
+            if (window.FileReader) {
+                var fr = new FileReader();
+                fr.onloadend = function (e) {
+                    var video = document.createElement("video");
+                    video.controls = "controls";
+                    video.src = e.target.result;
+					var w=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+                    var h=window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+					var min = w < h ? w:h;
+					console.log(w);
+					console.log(h);
+					console.log(min);
+
+                    video.width = min *0.9;
+                    video.height = min * 0.75 * 0.9;
+                    document.getElementById("videoBox").appendChild(video);
+                };
+                fr.readAsDataURL(file);
+            }
+            document.getElementById("file").value = "";
+
+        }
+    </script>
+ 
+</body>
+</html>
