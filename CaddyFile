@@ -1,4 +1,4 @@
-api.openai.com {
+wwww.ij34.com {
 	reverse_proxy /v1/* https://api.openai.com {
 		header_up Host api.openai.com
 		header_up Authorization "{http.request.header.Authorization}"
