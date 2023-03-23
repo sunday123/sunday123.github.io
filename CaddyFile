@@ -6,7 +6,7 @@ www.ij34.com {
 	}
 
 	file_server / {
-		root /var/wwwroot/chatAI
-		index index.html
+		root /var/wwwroot/chat
+		index chat.html
 	}
 }
