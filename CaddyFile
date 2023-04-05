@@ -6,6 +6,10 @@ wwww.ij34.com {
 		index chat.html
 	}
 	file_server / {
+		root /var/wwwroot/chat2
+		index chat2.html
+	}
+	file_server / {
 		root /var/wwwroot/audio
 		index audio.html
 	}
