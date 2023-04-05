@@ -55,6 +55,7 @@
                 var fr = new FileReader();
                 fr.onloadend = function (e) {
                     var video = document.createElement("video");
+					video.loop="loop";
                     video.controls = "controls";
                     video.src = e.target.result;
 					var w=window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
