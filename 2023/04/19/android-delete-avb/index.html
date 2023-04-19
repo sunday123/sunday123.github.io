@@ -7,9 +7,12 @@
     <head>
       <meta charset="utf-8" />
        
-      <meta name="keywords" content="java,mysql,linux,develop,english,android" />
+      <meta
+        name="keywords"
+        content="android,avb,miui,Screen lock,vendor,fstab"
+      />
        
-      <meta name="description" content="Just blog,including java,mysql,linux,develop,english,android..." />
+      <meta name="description" content="Simply record it, remove the AVB check for Android MIUI, and remove the screen lock." />
       
       <meta
         name="viewport"
@@ -17,7 +20,7 @@
       />
 	  <meta name="google-site-verification" content="MpICyUa6M2MkE3vruSqLVM5tnr1hlj6uf5uPZXieaWs" />
 
-      <title>Archives |  Just</title>
+      <title>android：delete avb |  Just</title>
   <meta name="generator" content="hexo-theme-ayer">
       
       <link rel="shortcut icon" href="/favicon.ico" />
@@ -59,78 +62,179 @@
       
     <main class="content on">
       <section class="outer">
-  
-  
-  <article class="articles">
+  <article
+  id="post-android-delete-avb"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
     
-    
-    <h1 class="page-type-title">Archives</h1>
-    
-    
-  
-  
-  
-  
-  
-  
-  <div class="archives-wrap">
-    <div class="archive-year-wrap">
-      <a href="/archives/2020" class="archive-year">2020</a>
-    </div>
-    <div class="archives">
-      
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/10/11/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B8%B8%E8%A7%81%E8%AF%8D%E6%B1%87%E5%8F%91%E9%9F%B3/" class="archive-article-date">
-  <time datetime="2020-10-11T01:54:24.000Z" itemprop="datePublished">10/11</time>
-</a>
+    <header class="article-header">
        
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/10/11/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B8%B8%E8%A7%81%E8%AF%8D%E6%B1%87%E5%8F%91%E9%9F%B3/"
-    >程序员常见词汇发音</a> 
-</h2>
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  android：delete avb
+</h1>
  
 
-    </header>
-    
-    
-  </div>
-</article>
       
-  
-  
-      <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2020/02/13/about/" class="archive-article-date">
-  <time datetime="2020-02-12T18:37:04.000Z" itemprop="datePublished">02/13</time>
-</a>
-       
-<h2 itemprop="name">
-  <a class="archive-article-title" href="/2020/02/13/about/"
-    >About Me</a> 
-</h2>
- 
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2023/04/19/android-delete-avb/" class="article-date">
+  <time datetime="2023-04-19T12:15:35.000Z" itemprop="datePublished">2023-04-19</time>
+</a>   
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">51</span>
+        </span>
+    </span>
 
-    </header>
-    
-    
-  </div>
-</article>
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">1 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
       
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>avb ：<a target="_blank" rel="noopener" href="https://source.android.google.cn/docs/core/architecture/kernel/mounting-partitions-early">https://source.android.google.cn/docs/core/architecture/kernel/mounting-partitions-early</a></p>
+<p>file: <strong>vendor/etc/fstab.qcom</strong></p>
+<p>clears all AVB code (except for the 7 AVBs in the figure)</p>
+<p><img src="https://file.ij34.com/images/2023-04/20230419102116.jpg"></p>
+<h2 id="MIUI-delete-screen-lock"><a href="#MIUI-delete-screen-lock" class="headerlink" title="MIUI delete screen lock"></a>MIUI delete screen lock</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/data/</span>system/locksettings</span><br></pre></td></tr></table></figure>
+
+
+
+<p>Similar to this kind of file, del two. The screen lock key was deleted.</p>
+ 
+      <!-- reward -->
       
     </div>
-  </div>
-  
-  
-
-  
-  <nav class="page-nav">
     
-    <a class="extend prev" rel="prev" href="/archives/">上一页</a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.ij34.com/2023/04/19/android-delete-avb/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/android/" rel="tag">android</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2023/02/07/git-Modify-the-userName-after-push/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">git-Modify the userName after push</div>
+      </a>
+    
   </nav>
-  
+
+ 
+   
+<div class="gitalk" id="gitalk-container"></div>
+<link rel="stylesheet" href="https://file.ij34.com/jsdelivr/css/gitalk.css">
+<script src="https://file.ij34.com/jsdelivr/js/gitalk.min.js"></script>
+
+<script src="https://file.ij34.com/jsdelivr/js/md5.min.js"></script>
+
+<script type="text/javascript">
+  var gitalk = new Gitalk({
+    clientID: '94949b2a544d50567f42',
+    clientSecret: '79843101df6d2ce5d91abce97de514a3318f2ced',
+    repo: 'blog-comment',
+    owner: 'sunday123',
+    admin: ['sunday123'],
+    // id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: md5(location.pathname),
+    distractionFreeMode: false,  // Facebook-like distraction free mode
+    pagerDirection: 'last'
+  })
+
+  gitalk.render('gitalk-container')
+</script>
+
+     
+</article>
+
 </section>
       <footer class="footer">
   <div class="outer">
@@ -229,6 +333,23 @@
 <script src="/js/lazyload.min.js"></script>
 
 <!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+
+</script>
 
 <script src="https://file.ij34.com/jsdelivr/js/jquery.modal.min.js"></script>
 <link
