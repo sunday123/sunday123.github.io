@@ -1306,6 +1306,8 @@
 <p>file: <strong>vendor/etc/fstab.qcom</strong></p>
 <p>clears all AVB code (except for the 7 AVBs in the figure)</p>
 <p><img src="https://file.ij34.com/images/2023-04/20230419102116.jpg"></p>
+<p>Find the line of code [userdata] with code similar to this, and delete it.</p>
+<p>【fileencryption=ice,wrappedkey,keydirectory=/metadata/vold/metadata_encryption,】</p>
 <h2 id="MIUI-delete-screen-lock"><a href="#MIUI-delete-screen-lock" class="headerlink" title="MIUI delete screen lock"></a>MIUI delete screen lock</h2><figure class="highlight awk"><table><tr><td class="code"><pre><span class="line"><span class="regexp">/data/</span>system/locksettings</span><br></pre></td></tr></table></figure>
 
 

@@ -6,7 +6,7 @@
   <link href="https://www.ij34.com/atom.xml" rel="self"/>
   
   <link href="https://www.ij34.com/"/>
-  <updated>2023-04-19T12:24:49.121Z</updated>
+  <updated>2023-04-19T12:42:46.939Z</updated>
   <id>https://www.ij34.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://www.ij34.com/2023/04/19/android-delete-avb/"/>
     <id>https://www.ij34.com/2023/04/19/android-delete-avb/</id>
     <published>2023-04-19T12:15:35.000Z</published>
-    <updated>2023-04-19T12:24:49.121Z</updated>
+    <updated>2023-04-19T12:42:46.939Z</updated>
     
-    <content type="html"><![CDATA[<p>avb ：<a href="https://source.android.google.cn/docs/core/architecture/kernel/mounting-partitions-early">https://source.android.google.cn/docs/core/architecture/kernel/mounting-partitions-early</a></p><p>file: <strong>vendor/etc/fstab.qcom</strong></p><p>clears all AVB code (except for the 7 AVBs in the figure)</p><p><img src="https://file.ij34.com/images/2023-04/20230419102116.jpg"></p><h2 id="MIUI-delete-screen-lock"><a href="#MIUI-delete-screen-lock" class="headerlink" title="MIUI delete screen lock"></a>MIUI delete screen lock</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/data/</span>system/locksettings</span><br></pre></td></tr></table></figure><p>Similar to this kind of file, del two. The screen lock key was deleted.</p>]]></content>
+    <content type="html"><![CDATA[<p>avb ：<a href="https://source.android.google.cn/docs/core/architecture/kernel/mounting-partitions-early">https://source.android.google.cn/docs/core/architecture/kernel/mounting-partitions-early</a></p><p>file: <strong>vendor/etc/fstab.qcom</strong></p><p>clears all AVB code (except for the 7 AVBs in the figure)</p><p><img src="https://file.ij34.com/images/2023-04/20230419102116.jpg"></p><p>Find the line of code [userdata] with code similar to this, and delete it.</p><p>【fileencryption=ice,wrappedkey,keydirectory=/metadata/vold/metadata_encryption,】</p><h2 id="MIUI-delete-screen-lock"><a href="#MIUI-delete-screen-lock" class="headerlink" title="MIUI delete screen lock"></a>MIUI delete screen lock</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/data/</span>system/locksettings</span><br></pre></td></tr></table></figure><p>Similar to this kind of file, del two. The screen lock key was deleted.</p>]]></content>
     
     
     <summary type="html">Simply record it, remove the AVB check for Android MIUI, and remove the screen lock.</summary>
