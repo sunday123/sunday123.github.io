@@ -90,7 +90,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> Word count:</span>
-            <span class="post-count">72</span>
+            <span class="post-count">249</span>
         </span>
     </span>
 
@@ -125,6 +125,20 @@
 
 
 <p>Similar to this kind of file, del two. The screen lock key was deleted.</p>
+<h2 id="crDroid-delete-screen-lock"><a href="#crDroid-delete-screen-lock" class="headerlink" title="crDroid delete screen lock"></a>crDroid delete screen lock</h2><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/data/</span>system/locksettings.db</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>Already flashed Gapps’ crDroid, after re-flashing the rom. Then restore the backup and the screen passcode will change. At this time, you need to delete the locksettings.db file. If crDroid is stuck on the second screen after restarting, it may be caused by Gapps and needs to be re-flashed.</p>
+<h2 id="Check-the-current-A-B-slots-for-Android"><a href="#Check-the-current-A-B-slots-for-Android" class="headerlink" title="Check the current A/B slots for Android."></a>Check the current A/B slots for Android.</h2><p>In the Android system, if the device supports A/B partitioning, the system will create two partitions in the device, one is the currently used partition and the other is the alternate partition. These two partitions are called slots. When using the adb shell command, you can see which slot the current system belongs to with the following command:</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">getprop</span> ro.boot.slot_suffix</span><br></pre></td></tr></table></figure>
+
+
+
+<p>This command returns the slot number to which the current system belongs, for example, if the returned result is “_a”, it means that the current system belongs to slot A. </p>
+<p>If the returned result is “_b”, it means that the current system belongs to slot B.</p>
  
       <!-- reward -->
       
