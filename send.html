@@ -18,7 +18,17 @@
     <script src="https://cdn.jsdelivr.net/npm/simple-peer/simplepeer.min.js"></script>
     <script>
         var senderPeer;
-        var receiverPeer;
+        var receiverPeer = new SimplePeer({ initiator: false }); // 创建接收方的Peer对象
+        
+        senderPeer = new SimplePeer({ initiator: true }); // 创建发送方的Peer对象
+        
+        senderPeer.on('signal', function(offer) {
+            receiverPeer.signal(offer); // 发送方连接到接收方
+        });
+        
+        receiverPeer.on('signal', function(answer) {
+            senderPeer.signal(answer); // 接收方连接到发送方
+        });
         
         function sendFile() {
             var fileInput = document.getElementById('fileInput');
@@ -108,27 +118,12 @@
                     alert('接收文件失败');
                 }
             });
-            
-            // 创建接收方的Peer对象并连接到发送方
-            receiverPeer = new SimplePeer({ initiator: false });
-            
-            receiverPeer.on('signal', function(answer) {
-                senderPeer.signal(answer);
-            });
         }
         
         function generateVerificationCode() {
             // 生成随机的2位数验证码
             return Math.floor(Math.random() * 90 + 10).toString();
         }
-        
-        // 创建发送方的Peer对象
-        senderPeer = new SimplePeer({ initiator: true });
-        
-        // 发送方连接到接收方
-        senderPeer.on('signal', function(offer) {
-            receiverPeer.signal(offer);
-        });
     </script>
 </body>
 </html>
