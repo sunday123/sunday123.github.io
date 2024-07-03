@@ -1640,6 +1640,8 @@
 
 
 
+<h1 id="124二叉树中的最大路径和"><a href="#124二叉树中的最大路径和" class="headerlink" title="124二叉树中的最大路径和"></a>124二叉树中的最大路径和</h1><p><a href="https://leetcode.cn/problems/binary-tree-maximum-path-sum">https://leetcode.cn/problems/binary-tree-maximum-path-sum</a></p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LC124</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> res=Integer.MIN_VALUE;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maxPathSum</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        cal(root);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">cal</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root==<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> left=cal(root.left);</span><br><span class="line">        <span class="keyword">int</span> right = cal(root.right);</span><br><span class="line">        <span class="keyword">int</span> sum=Math.max(Math.max(left,right)+root.val,root.val);<span class="comment">//比较本身，和左右两边</span></span><br><span class="line">        res=Math.max(Math.max(res,sum), root.val+left+right);<span class="comment">//比较（左+右+本身）</span></span><br><span class="line">        <span class="keyword">return</span> sum;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
 
@@ -1647,7 +1649,69 @@
 
 
 
-
+<h1 id="647回文子串"><a href="#647回文子串" class="headerlink" title="647回文子串"></a>647回文子串</h1><table>
+<thead>
+<tr>
+<th align="left"></th>
+<th align="left">j0</th>
+<th>1</th>
+<th align="center">2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">i0</td>
+<td align="left">1</td>
+<td>0</td>
+<td align="center">0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left"></td>
+<td>1</td>
+<td align="center">0</td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left"></td>
+<td></td>
+<td align="center">1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left"></td>
+<td></td>
+<td align="center"></td>
+<td>1</td>
+<td>0</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left"></td>
+<td></td>
+<td align="center"></td>
+<td></td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>abcba</p>
+<p>01234</p>
+<p>2个问题：</p>
+<p>1为什么不用左下角？左下角是i&gt;j,不方便理解，相当于（j-&gt;i）</p>
+<p>2.为什么i不从上到下？比如要判断abcba（i,j）是回文，bcb(i+1,j-1）必然是回文，而(i+1,j-1）在下方。</p>
+<ul>
+<li>abcba</li>
+<li>如果字符相等，相邻1个元素以内，必然是回文</li>
+<li>如果字符相等，比如第一个a和最后一个a，就判断bcb是否为回文。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LC647</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">countSubstrings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> len=s.length();</span><br><span class="line">        <span class="keyword">boolean</span>[][] dp = <span class="keyword">new</span> <span class="keyword">boolean</span>[len][len];</span><br><span class="line">        <span class="keyword">int</span> count=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=len-<span class="number">1</span>;i&gt;=<span class="number">0</span>;i--)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=i;j&lt;len;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span> (j-i&lt;<span class="number">2</span> &amp;&amp; s.charAt(i)==s.charAt(j))&#123;</span><br><span class="line">                    dp[i][j]=<span class="keyword">true</span>;</span><br><span class="line">                    count++;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span> (s.charAt(i)==s.charAt(j) &amp;&amp; dp[i+<span class="number">1</span>][j-<span class="number">1</span>])&#123;</span><br><span class="line">                    dp[i][j]=<span class="keyword">true</span>;</span><br><span class="line">                    count++;</span><br><span class="line"></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>LeetCode</tag>
