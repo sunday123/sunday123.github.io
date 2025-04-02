@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Android自带应用精简</title>
-    <url>/2022/08/02/Android%E8%87%AA%E5%B8%A6%E5%BA%94%E7%94%A8%E7%B2%BE%E7%AE%80/</url>
+    <url>/2022/Android%E8%87%AA%E5%B8%A6%E5%BA%94%E7%94%A8%E7%B2%BE%E7%AE%80/</url>
     <content><![CDATA[<p>个别软件,前提要去卡米</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RmRfTest</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span> (String str : FileUtil.readUtf8Lines(<span class="string">&quot;rm44.txt&quot;</span>)) &#123;</span><br><span class="line">            System.out.println(str + <span class="string">&quot;||||||&quot;</span> + RuntimeUtil.execForStr(str));</span><br><span class="line">            ThreadUtil.sleep(<span class="number">200</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
@@ -30,7 +30,7 @@
   </entry>
   <entry>
     <title>48个音标</title>
-    <url>/2021/11/20/48%E4%B8%AA%E9%9F%B3%E6%A0%87/</url>
+    <url>/2021/48%E4%B8%AA%E9%9F%B3%E6%A0%87/</url>
     <content><![CDATA[<h2 id="48个音标"><a href="#48个音标" class="headerlink" title="48个音标"></a>48个音标</h2><table>
 <thead>
 <tr>
@@ -387,7 +387,7 @@
   </entry>
   <entry>
     <title>GitHub, build free Image Hosting</title>
-    <url>/2022/08/07/GitHub-build-free-Image-Hosting/</url>
+    <url>/2022/GitHub-build-free-Image-Hosting/</url>
     <content><![CDATA[<p>The computer needs to have jdk11 or higher version installed.</p>
 <p><a href="https://github.com/sunday123/github-oss/releases">https://github.com/sunday123/github-oss/releases</a></p>
 <p>**Windows run -**click file:startup.cmd</p>
@@ -410,7 +410,7 @@
   </entry>
   <entry>
     <title>About Me</title>
-    <url>/2020/02/13/about/</url>
+    <url>/2020/about/</url>
     <content><![CDATA[<blockquote>
 <p>A Coder, live in Guangzhou, China.</p>
 </blockquote>
@@ -422,7 +422,7 @@
   </entry>
   <entry>
     <title>android：delete avb</title>
-    <url>/2023/04/19/android-delete-avb/</url>
+    <url>/2023/android-delete-avb/</url>
     <content><![CDATA[<p>avb ：<a href="https://source.android.google.cn/docs/core/architecture/kernel/mounting-partitions-early">https://source.android.google.cn/docs/core/architecture/kernel/mounting-partitions-early</a></p>
 <p>file: <strong>vendor/etc/fstab.qcom</strong></p>
 <p>clears all AVB code (except for the 7 AVBs in the figure)</p>
@@ -455,7 +455,7 @@
   </entry>
   <entry>
     <title>centos7 update ssh port</title>
-    <url>/2023/02/01/centos7-update-ssh-port/</url>
+    <url>/2023/centos7-update-ssh-port/</url>
     <content><![CDATA[<h2 id="0x01-open-ports-firewall"><a href="#0x01-open-ports-firewall" class="headerlink" title="0x01 open ports firewall"></a>0x01 open ports firewall</h2><p>It should include 22 port</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl status firewalld</span><br><span class="line">firewall-cmd --zone=public --list-all </span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=222/tcp</span><br><span class="line">firewall-cmd --permanent --zone=public --add-port=22/tcp</span><br></pre></td></tr></table></figure>
 
@@ -487,7 +487,7 @@
   </entry>
   <entry>
     <title>docker快速部署springboot例子</title>
-    <url>/2020/10/14/docker%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2springboot%E4%BE%8B%E5%AD%90/</url>
+    <url>/2020/docker%E5%BF%AB%E9%80%9F%E9%83%A8%E7%BD%B2springboot%E4%BE%8B%E5%AD%90/</url>
     <content><![CDATA[<h2 id="docker快速部署springboot项目例子"><a href="#docker快速部署springboot项目例子" class="headerlink" title="docker快速部署springboot项目例子"></a>docker快速部署springboot项目例子</h2><p>前提:linux安装了docker和maven</p>
 <h3 id="步骤一：docker安装jdk"><a href="#步骤一：docker安装jdk" class="headerlink" title="步骤一：docker安装jdk"></a>步骤一：docker安装jdk</h3><p>查找镜像</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">docker search  jdk </span><br></pre></td></tr></table></figure>
@@ -535,7 +535,7 @@
   </entry>
   <entry>
     <title>git-Modify the userName after push</title>
-    <url>/2023/02/07/git-Modify-the-userName-after-push/</url>
+    <url>/2023/git-Modify-the-userName-after-push/</url>
     <content><![CDATA[<p>This method is suitable for updating the username after pushing.</p>
 <p>cd  the root of THE GIT PROJECT</p>
 <p>Replace the following parameters.</p>
@@ -556,7 +556,7 @@
   </entry>
   <entry>
     <title>github不同项目pages使用不同的域名</title>
-    <url>/2022/08/02/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
+    <url>/2022/github%E4%B8%8D%E5%90%8C%E9%A1%B9%E7%9B%AEpages%E4%BD%BF%E7%94%A8%E4%B8%8D%E5%90%8C%E7%9A%84%E5%9F%9F%E5%90%8D/</url>
     <content><![CDATA[<h1 id="github不同项目pages使用不同的域名"><a href="#github不同项目pages使用不同的域名" class="headerlink" title="github不同项目pages使用不同的域名"></a>github不同项目pages使用不同的域名</h1><h2 id="CNAME方式"><a href="#CNAME方式" class="headerlink" title="CNAME方式"></a>CNAME方式</h2><p>最常见的是 CNAME方式： <user>.github.io 或 <organization>.github.io </p>
 <p>具体参考 <a href="https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages">https://docs.github.com/cn/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages</a> </p>
 <p>比如添加 <a href="http://www.example.com/">www.example.com</a> 指向 example.github.io在项目根目录 添加文件CNAME, </p>
@@ -578,7 +578,7 @@
   </entry>
   <entry>
     <title>数据库常见的操作</title>
-    <url>/2020/10/11/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/</url>
+    <url>/2020/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%B8%B8%E8%A7%81%E7%9A%84%E6%93%8D%E4%BD%9C/</url>
     <content><![CDATA[<h1 id="数据库的操作"><a href="#数据库的操作" class="headerlink" title="数据库的操作"></a>数据库的操作</h1><h2 id="常见查询语句"><a href="#常见查询语句" class="headerlink" title="常见查询语句"></a>常见查询语句</h2><ul>
 <li><h3 id="每个用户最新登录的时间"><a href="#每个用户最新登录的时间" class="headerlink" title="每个用户最新登录的时间"></a>每个用户最新登录的时间</h3></li>
 </ul>
@@ -808,7 +808,7 @@
   </entry>
   <entry>
     <title>程序员常见词汇发音</title>
-    <url>/2020/10/11/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B8%B8%E8%A7%81%E8%AF%8D%E6%B1%87%E5%8F%91%E9%9F%B3/</url>
+    <url>/2020/%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B8%B8%E8%A7%81%E8%AF%8D%E6%B1%87%E5%8F%91%E9%9F%B3/</url>
     <content><![CDATA[<h2 id="常见单词表"><a href="#常见单词表" class="headerlink" title="常见单词表"></a>常见单词表</h2><table>
 <thead>
 <tr>
@@ -1036,7 +1036,7 @@
   </entry>
   <entry>
     <title>leetcode算法</title>
-    <url>/2020/10/11/%E7%AE%97%E6%B3%95/</url>
+    <url>/2020/%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h4 id="LRU缓存"><a href="#LRU缓存" class="headerlink" title="LRU缓存"></a>LRU缓存</h4><p><a href="https://leetcode-cn.com/problems/lru-cache-lcci/">https://leetcode-cn.com/problems/lru-cache-lcci/</a></p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">LRUCache</span> <span class="keyword">extends</span> <span class="title">LinkedHashMap</span>&lt;<span class="title">Integer</span>, <span class="title">Integer</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> capacity;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">LRUCache</span><span class="params">(<span class="keyword">int</span> capacity)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">super</span>(capacity,<span class="number">0.75f</span>,<span class="keyword">true</span>);</span><br><span class="line">       <span class="keyword">this</span>.capacity=capacity;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">get</span><span class="params">(<span class="keyword">int</span> key)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">return</span> <span class="keyword">super</span>.getOrDefault(key,-<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(<span class="keyword">int</span> key, <span class="keyword">int</span> value)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>.put(key, value);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">protected</span> <span class="keyword">boolean</span> <span class="title">removeEldestEntry</span><span class="params">(Map.Entry&lt;Integer, Integer&gt; eldest)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> size() &gt; capacity; </span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your LRUCache object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * LRUCache obj = new LRUCache(capacity);</span></span><br><span class="line"><span class="comment"> * int param_1 = obj.get(key);</span></span><br><span class="line"><span class="comment"> * obj.put(key,value);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
 
@@ -1478,7 +1478,7 @@
   </entry>
   <entry>
     <title>非leetcode算法</title>
-    <url>/2024/05/29/%E9%9D%9Eleetcode%E7%AE%97%E6%B3%95/</url>
+    <url>/2024/%E9%9D%9Eleetcode%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h1 id="二维数组中-3位置找-2位置"><a href="#二维数组中-3位置找-2位置" class="headerlink" title="二维数组中-3位置找-2位置"></a>二维数组中-3位置找-2位置</h1><p>dfs 8维以上时间太长。</p>
 <p>bfs </p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ParentChildGame</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner sc = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> N =Integer.valueOf(sc.nextLine());</span><br><span class="line">        <span class="keyword">int</span>[][] a = <span class="keyword">new</span> <span class="keyword">int</span>[N][N];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">            a[i]= Arrays.stream(sc.nextLine().split(<span class="string">&quot; &quot;</span>)).mapToInt(Integer::parseInt).toArray();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span>[] mom = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>],baby = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;N;i++)&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;N;j++)&#123;</span><br><span class="line">                <span class="keyword">if</span> (a[i][j]==-<span class="number">3</span>)&#123;</span><br><span class="line">                    mom[<span class="number">0</span>]=i;</span><br><span class="line">                    mom[<span class="number">1</span>]=j;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span> (a[i][j]==-<span class="number">2</span>)&#123;</span><br><span class="line">                    baby[<span class="number">0</span>]=i;</span><br><span class="line">                    baby[<span class="number">1</span>]=j;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        bfs(a,mom[<span class="number">0</span>],mom[<span class="number">1</span>],baby[<span class="number">0</span>],baby[<span class="number">1</span>]);</span><br><span class="line"></span><br><span class="line">        System.out.println(maxRes);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> minSize = Integer.MAX_VALUE;<span class="comment">//最小时间</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> maxRes = -<span class="number">1</span>;<span class="comment">//最大糖果数</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">(<span class="keyword">int</span>[][] a, <span class="keyword">int</span> x, <span class="keyword">int</span> y, <span class="keyword">int</span> bi, <span class="keyword">int</span> bj)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">boolean</span>[][] visited = <span class="keyword">new</span> <span class="keyword">boolean</span>[a.length][a[<span class="number">0</span>].length];</span><br><span class="line">        <span class="comment">// x y 时间 糖果</span></span><br><span class="line">        PriorityQueue&lt;<span class="keyword">int</span>[]&gt; priorityQueue = <span class="keyword">new</span> PriorityQueue&lt;&gt;((c, d) -&gt; &#123;</span><br><span class="line">            <span class="keyword">if</span> (c[<span class="number">2</span>]!=d[<span class="number">2</span>])&#123;</span><br><span class="line">                <span class="keyword">return</span> c[<span class="number">2</span>]-d[<span class="number">2</span>];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> d[<span class="number">3</span>]-c[<span class="number">3</span>];</span><br><span class="line">        &#125;);</span><br><span class="line">        priorityQueue.add(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;x,y,<span class="number">0</span>,<span class="number">0</span>&#125;);</span><br><span class="line">        visited[x][y]=<span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">while</span> (priorityQueue.size()&gt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span>[] poll =priorityQueue.poll();</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> i=poll[<span class="number">0</span>],j=poll[<span class="number">1</span>],size=poll[<span class="number">2</span>],res=poll[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (i==bi &amp;&amp; j==bj)&#123;</span><br><span class="line">                <span class="keyword">if</span> (size&lt;minSize)&#123;</span><br><span class="line">                    minSize=size;</span><br><span class="line">                    maxRes=res;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (size==minSize &amp;&amp; res&gt;maxRes)&#123;</span><br><span class="line">                    maxRes=res;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">continue</span>;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span>[][] dir =&#123;&#123;<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;-<span class="number">1</span>,<span class="number">0</span>&#125;,&#123;<span class="number">0</span>,<span class="number">1</span>&#125;,&#123;<span class="number">0</span>,-<span class="number">1</span>&#125;&#125;;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span>[] d :dir)&#123;</span><br><span class="line">                <span class="keyword">int</span> ci=i+d[<span class="number">0</span>],cj=j+d[<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">if</span> (ci&gt;=<span class="number">0</span> &amp;&amp; cj&gt;=<span class="number">0</span> &amp;&amp; ci&lt;a.length &amp;&amp; cj&lt;a[<span class="number">0</span>].length &amp;&amp; visited[ci][cj]==<span class="keyword">false</span> &amp;&amp; a[ci][cj]!=-<span class="number">1</span>)&#123;</span><br><span class="line">                    visited[ci][cj]=<span class="keyword">true</span>;</span><br><span class="line">                    priorityQueue.add(<span class="keyword">new</span> <span class="keyword">int</span>[]&#123;ci,cj,size+<span class="number">1</span>,res+(a[ci][cj]&gt;<span class="number">0</span>?a[ci][cj]:<span class="number">0</span>)&#125;);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -1615,7 +1615,7 @@
   </entry>
   <entry>
     <title>leetcode算法2</title>
-    <url>/2024/06/26/%E7%AE%97%E6%B3%952/</url>
+    <url>/2024/%E7%AE%97%E6%B3%952/</url>
     <content><![CDATA[<h1 id="76-最小覆盖子串"><a href="#76-最小覆盖子串" class="headerlink" title="76 最小覆盖子串"></a>76 最小覆盖子串</h1><p><a href="https://leetcode.cn/problems/minimum-window-substring/">https://leetcode.cn/problems/minimum-window-substring/</a></p>
 <figure class="highlight nix"><table><tr><td class="code"><pre><span class="line">输入：<span class="attr">s</span> = <span class="string">&quot;ADOBECODEBANC&quot;</span>, <span class="attr">t</span> = <span class="string">&quot;ABC&quot;</span></span><br><span class="line">输出：<span class="string">&quot;BANC&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -1746,7 +1746,7 @@
   </entry>
   <entry>
     <title>八种排序算法</title>
-    <url>/2025/04/02/%E5%85%AB%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
+    <url>/2025/%E5%85%AB%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</url>
     <content><![CDATA[<h1 id="1-直接插入排序"><a href="#1-直接插入排序" class="headerlink" title="1.直接插入排序"></a>1.直接插入排序</h1><p>经常碰到这样一类排序问题：把新的数据插入到已经排好的数据列中。</p>
 <p>将第一个数和第二个数排序，然后构成一个有序序列</p>
 <p>将第三个数插入进去，构成一个新的有序序列。</p>
@@ -1900,7 +1900,7 @@
   </entry>
   <entry>
     <title>遍历算法手稿</title>
-    <url>/2025/04/02/%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95%E6%89%8B%E7%A8%BF/</url>
+    <url>/2025/%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95%E6%89%8B%E7%A8%BF/</url>
     <content><![CDATA[<h1 id="1-中序后序求先序"><a href="#1-中序后序求先序" class="headerlink" title="1.中序后序求先序"></a>1.中序后序求先序</h1><p>已知二叉树后序遍历序列是dabec，中序遍历序列是debac，它的前序遍历序列是</p>
 <p><img src="https://file.ij34.com/images/2025-04/20250402233118.jpg"></p>
 <h1 id="2-先序中序求后序"><a href="#2-先序中序求后序" class="headerlink" title="2.先序中序求后序"></a>2.先序中序求后序</h1><p>已知一棵二叉树前序遍历和中序遍历分别为 ABDEGCFH 和 DBGEACHF，</p>
