@@ -1895,7 +1895,21 @@
 
 ]]></content>
       <tags>
-        <tag>数据结构与算法&#39;</tag>
+        <tag>数据结构与算法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>遍历算法手稿</title>
+    <url>/2025/04/02/%E9%81%8D%E5%8E%86%E7%AE%97%E6%B3%95%E6%89%8B%E7%A8%BF/</url>
+    <content><![CDATA[<h1 id="1-中序后序求先序"><a href="#1-中序后序求先序" class="headerlink" title="1.中序后序求先序"></a>1.中序后序求先序</h1><p>已知二叉树后序遍历序列是dabec，中序遍历序列是debac，它的前序遍历序列是</p>
+<p><img src="https://file.ij34.com/images/2025-04/20250402233118.jpg"></p>
+<h1 id="2-先序中序求后序"><a href="#2-先序中序求后序" class="headerlink" title="2.先序中序求后序"></a>2.先序中序求后序</h1><p>已知一棵二叉树前序遍历和中序遍历分别为 ABDEGCFH 和 DBGEACHF，</p>
+<p>前序中序与后序中序求二叉树的区别是，前序中序根节点在前序的从前往后-》找</p>
+<p>​                                后序中序根节点在后序的从后往前《-找</p>
+<p><img src="https://file.ij34.com/images/2025-04/20250402233416.jpg"></p>
+]]></content>
+      <tags>
+        <tag>数据结构与算法</tag>
       </tags>
   </entry>
 </search>
